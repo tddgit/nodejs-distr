@@ -318,6 +318,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/recipe-api/producer-https-basic.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/registerServiceWorker.js">
           <value>
             <Attribute>

@@ -1,4 +1,3 @@
-
 const server = require('fastify')();
 
 const HOST = process.env.HOST || '127.0.0.1';

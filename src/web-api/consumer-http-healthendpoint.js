@@ -7,13 +7,18 @@ const TARGET = process.env.TARGET || 'localhost:4001';
 
 server.get('/', async () => {
     console.log(`worker request pid=${process.pid}`);
-    const req = await fetch(`http://${TARGET}/recipes/42`);
+    const req = await fetch(`http://${HOST}:${PORT}/recipes/42`);
     const producer_data = await req.json();
 
     return {
         consumer_pid: process.pid,
         producer_data,
     };
+});
+
+server.get('/health', async () => {
+    console.log('health check');
+    return 'OK';
 });
 
 server.listen(PORT, HOST, () => {
