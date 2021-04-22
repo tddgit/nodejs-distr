@@ -1,51 +1,95 @@
-const express = require('express');
-const expressHandlebars = require('express-hanblebars');
+const fs = require('fs');
 
-const app = express();
+const log = console.log;
 
-app.engine(
-    'handlebars',
-    expressHandlebars({
-        defaultLayout: 'main',
-    }),
+fs.promises.readFile('/etc/passwd', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+
+setImmediate(() => {
+    console.log('This runs while file is beeing readed');
+});
+
+setTimeout(() => console.log('A', 0));
+log('B');
+setImmediate(() => log('F -SetImmediate'));
+setTimeout(() => console.log('C'), 101);
+setTimeout(() => log('D'), 100);
+
+let i = 0;
+while (i < 1_000_000) {
+    const ignore = Math.sqrt(i);
+    i++;
+}
+
+log('E');
+
+const t1 = setTimeout(() => {
+    log('Timeout1');
+}, 100);
+const t2 = setTimeout(() => {
+    log('Timeout2');
+}, 101);
+
+t1.unref();
+clearTimeout(t2);
+
+console.log(
+    setTimeout(() => {
+        log('Timeout1');
+    }, 100),
 );
 
-app.set('veiw engine', 'handlebars');
-
-const port = process.env || 3001;
-
-app.get('/', (req, res) => {
-    res.type('text/plain');
-    res.status(200);
-    res.send('Meadowlark Travel');
+setImmediate(() => log('1'));
+log('2');
+setTimeout(() => log('4'));
+Promise.resolve().then(() => log('3'));
+process.nextTick(() => log('5'));
+fs.promises.readFile(__filename, () => {
+    log('6');
+    setTimeout(() => log('7'));
+    setImmediate(() => log('8'));
+    Promise.resolve().then(() => log('9'));
+    process.nextTick(() => log('10'));
 });
 
-app.get('/about', (req, res) => {
-    res.type('text/plain');
-    res.status(200);
-    res.send('About Meadowlark Travel');
-});
+const sleep_st = (t) => new Promise((r) => setTimeout(r, t));
+const sleep_im = () => new Promise((r) => setImmediate(r));
 
-app.use(express.static(__dirname, '/public'));
+(async () => {
+    setImmediate(() => log('1'));
+    log('2');
+    await sleep_st(0);
+    setImmediate(() => log('3'));
+    log('4');
+    await sleep_im();
+    setImmediate(() => log('5'));
+    log('6');
+    await 1;
+    setImmediate(() => log('7'));
+    log('8');
+})();
 
-app.use((req, res) => {
-    // res.type('text/plain');
-    res.status(404);
-    // res.send('404- NOT FOUND');
-    res.render('404');
-});
+const nt_recursive = () => process.nextTick(nt_recursive);
+nt_recursive();
 
-app.use((err, req, res, next) => {
-    console.error(err.message);
-    // res.type('text/plain');
-    res.status(500);
-    // res.send('500-SERVER ERROR');
-    res.render('500');
-});
+const si_recursive = () => setImmediate(si_recursive);
+si_recursive();
 
-app.listen(port, () =>
-    console.log(
-        `Experss started on http://localhost:${port}` +
-            `press Ctrl-C to terminate`,
-    ),
-);
+setInterval(() => log('hi'), 10);
+
+// function foo(count, callback) {
+//     if (count <= 0) {
+//         return process.nextTick(() => callback(new TypeError('count > 0')));
+//
+//     }
+//     myAsyncOperation(count, callback);
+// }
+//
+// let bar = false;
+// foo(3, () => {
+//     assert(bar);
+// });
+//
+// bar = true;
