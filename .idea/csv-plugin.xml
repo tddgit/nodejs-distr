@@ -297,6 +297,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/net/test-json-service.js">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/oop_classes.ts">
           <value>
             <Attribute>
