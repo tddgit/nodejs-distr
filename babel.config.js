@@ -14,6 +14,7 @@ const plugins = [
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-do-expressions',
+    '@babel/plugin-proposal-record-and-tuple',
     [
         '@babel/plugin-proposal-decorators',
         {

@@ -178,6 +178,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/caching/server.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/classes/UserSearch.tsx">
           <value>
             <Attribute>
