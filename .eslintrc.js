@@ -64,19 +64,22 @@ module.exports = {
     ],
 
     //  "parser": "@typescript-eslint/parser",
-    parser: 'babel-eslint',
+    // parser: 'babel-eslint',
+    // parser: '@babel/eslint-parser',
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2021,
         sourceType: 'module',
         ecmaFeatures: {
             jsx: true,
         },
+        parser: '@babel/eslint-parser',
     },
     // ignorePatterns: ['.eslintrc.js'],
     rules: {
         'no-unused-expressions': 1,
         camelcase: 0,
-        "babel/camelcase": 0,
+        'babel/camelcase': 0,
+        'func-names': ['off', 'always'],
         'consistent-return': 0,
         'react/state-in-constructor': ['off', 'always'],
         'react/prop-types': 'off',
@@ -123,7 +126,6 @@ module.exports = {
 
         'no-undef': 2,
         'no-plusplus': 0,
-        camelcase: 1,
         'max-len': [0],
         'import/no-extraneous-dependencies': [
             'error',
@@ -158,7 +160,6 @@ module.exports = {
         'react/no-multi-comp': 0,
         'global-require': 0,
         'babel/new-cap': 1,
-        'babel/camelcase': 1,
         'babel/no-invalid-this': 1,
         'babel/semi': 1,
         'babel/no-unused-expressions': 1,
@@ -449,9 +450,10 @@ module.exports = {
                 //
             ],
             rules: {
-                'no-unused-expressions': 1,
+                'no-unused-expressions': 0,
                 camelcase: 0,
                 'babel/camelcase': 0,
+                'func-names': ['off', 'always'],
                 'consistent-return': 0,
                 '@typescript-eslint/explicit-module-boundary-types': 'off',
                 'no-use-before-define': 'off',
@@ -500,7 +502,6 @@ module.exports = {
 
                 'no-undef': 2,
                 'no-plusplus': 0,
-                camelcase: 1,
                 'max-len': [0],
                 'import/no-extraneous-dependencies': [
                     'error',
@@ -509,7 +510,7 @@ module.exports = {
                     },
                 ],
                 // 'import/no-extraneous-dependencies':   0,
-                'no-unused-expressions': ['error', { allowTernary: true }],
+                'no-unused-expressions': 0,
                 'comma-dangle': 0,
                 'object-curly-newline': 0,
                 'no-unused-vars': 0,
@@ -535,10 +536,9 @@ module.exports = {
                 'react/no-multi-comp': 0,
                 'global-require': 0,
                 'babel/new-cap': 1,
-                'babel/camelcase': 1,
                 'babel/no-invalid-this': 1,
                 'babel/semi': 1,
-                'babel/no-unused-expressions': 1,
+                'babel/no-unused-expressions': 0,
                 'babel/valid-typeof': 1,
                 'new-cap': [
                     2,

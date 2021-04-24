@@ -171,6 +171,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/assert/assert.mjs">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/assert/callTracker.mjs">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/basic_and_custom_types.ts">
           <value>
             <Attribute>
@@ -213,6 +227,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/console/console.mjs">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/decorators.ts">
           <value>
             <Attribute>
@@ -228,6 +249,13 @@
           </value>
         </entry>
         <entry key="/src/events/EventComponent.tsx">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/fs/file_system.mjs">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -276,6 +304,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/intl/dateTimeFormat.mjs">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/js/index.js">
           <value>
             <Attribute>
@@ -308,6 +343,20 @@
           <value>
             <Attribute>
               <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/path/path.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/process/config.json">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

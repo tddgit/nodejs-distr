@@ -15,6 +15,7 @@ const plugins = [
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-do-expressions',
     '@babel/plugin-proposal-record-and-tuple',
+    '@babel/plugin-syntax-top-level-await',
     [
         '@babel/plugin-proposal-decorators',
         {
