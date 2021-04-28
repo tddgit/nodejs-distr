@@ -1,4 +1,4 @@
-import diagnostic_channel from 'diagnostic_channel';
+import diagnostic_channel from 'diagnostics_channel';
 
 const channel = diagnostic_channel.channel('my-channel');
 
