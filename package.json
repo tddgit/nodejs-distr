@@ -501,7 +501,7 @@
         "hoist-non-react-statics": "^3.3.2",
         "http-auth": "^4.1.5",
         "http-status": "^1.5.0",
-        "imagemin": "^7.0.1",
+        "imagemin": "^8.0.0",
         "imagemin-mozjpeg": "^9.0.0",
         "imagemin-pngquant": "^9.0.2",
         "immer": "9.0.0",
