@@ -9991,10 +9991,10 @@ awilix@^4.3.3:
     glob "^7.1.6"
     rollup-plugin-copy "^3.4.0"
 
-aws-sdk@^2.891.0:
-  version "2.892.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.892.0.tgz#adec48f52f4b6f5c576dcbfac020bcec1eed3a25"
-  integrity sha512-OOXJ15AnJJMHZYXJQVy22Wjnp5GrZCfvCxmoZuXdsLNs8M+BL4mfBqma82+UkM2NhJgLYuAhDfvFUBob6VGIWw==
+aws-sdk@^2.1001.0:
+  version "2.1001.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1001.0.tgz#c4da256aa0058438ba611ae06fa850f4f7d63abc"
+  integrity sha512-DpmslPU8myCaaRUwMzB/SqAMtD2zQckxYwq3CguIv8BI+JHxDLeTdPCLfA5jffQ8k6dcvISOuiqdpwCZucU0BA==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
