@@ -441,7 +441,7 @@
         "cloudinary": "^1.25.0",
         "clui": "^0.3.6",
         "codelyzer": "^6.0.0",
-        "commander": "7.1.0",
+        "commander": "9.4.0",
         "compression": "^1.7.4",
         "configstore": "^6.0.0",
         "connected-react-router": "^6.9.1",
