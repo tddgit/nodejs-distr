@@ -423,7 +423,7 @@
         "apollo-client": "^2.6.10",
         "awilix": "^4.3.3",
         "awilix-express": "^4.0.0",
-        "aws-sdk": "^2.891.0",
+        "aws-sdk": "^2.1299.0",
         "axios": "^0.21.1",
         "baconjs": "^3.0.17",
         "bcrypt": "^5.0.1",
